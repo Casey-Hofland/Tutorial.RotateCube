@@ -35,7 +35,13 @@ namespace Tutorial.RotateCube
 
         public bool DoesCubeHaveRotatorScript()
         {
-            return Array.Exists(GetCube().GetComponents<Component>(), component => component.GetType().Name == "Rotator");
+            var cube = GetCube();
+            if (!cube)
+            {
+                return false;
+            }
+            
+            return Array.Exists(cube.GetComponents<Component>(), component => component.GetType().Name == "Rotator");
         }
 
         public Quaternion lastRotation { get; set; }
@@ -49,14 +55,17 @@ namespace Tutorial.RotateCube
             }
 
             var cube = GetCube();
-            if (lastRotation == cube.transform.rotation)
+            if (cube)
             {
-                hasRotatedForSeconds = 0f;
-            }
-            else
-            {
-                hasRotatedForSeconds += Time.deltaTime;
-                lastRotation = cube.transform.rotation;
+                if (lastRotation == cube.transform.rotation)
+                {
+                    hasRotatedForSeconds = 0f;
+                }
+                else
+                {
+                    hasRotatedForSeconds += Time.deltaTime;
+                    lastRotation = cube.transform.rotation;
+                }
             }
 
             return false;

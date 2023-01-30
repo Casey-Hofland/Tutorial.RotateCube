@@ -1,0 +1,19 @@
+{
+  "name": "com.caseydecoder.tutorial.rotatecube",
+  "version": "0.1.0-pre",
+  "displayName": "Tutorial Rotate Cube",
+  "description": "A sample tutorial created with the tutorial authoring tools to teach people how to rotate a cube.",
+  "keywords": [
+    "Tutorial",
+    "Rotate",
+    "Cube"
+  ],
+  "author": {
+    "name": "CaseyDeCoder",
+    "email": "hofland.casey@gmail.com"
+  },
+  "unity": "2020.3",
+  "dependencies": {
+    "com.unity.learn.iet-framework": "3.1.3"
+  }
+}

@@ -1,0 +1,2 @@
+# Rotate Cube Tutorial
+A sample tutorial created with the [tutorial authoring tools](https://docs.unity3d.com/Packages/com.unity.learn.iet-framework.authoring@1.2/manual/index.html) to teach people how to rotate a cube.
